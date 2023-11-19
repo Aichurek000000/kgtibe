@@ -1,0 +1,11 @@
+{% extends base.html %}
+{% load django_bootstap5 %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {% bootstap_form playlist_form %}
+
+        <button class="btn btn-ptimary">add</button>
+    </form>
+{% endblock %}
